@@ -11,6 +11,10 @@
 | last_name_kana     | string  | null: false               |
 | birthday           | date    | null: false               |
 
+### Association
+- has_many :items
+- has_many :comments
+- has_many :orders
 
 ## itemsテーブル
 
@@ -40,7 +44,6 @@
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| addresses      | references | null: false, foreign_key: true |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 
@@ -55,3 +58,4 @@
 | building_name  | string     |                                |
 | tel_number     | string     | null: false                    |
 | prefecture_id  | integer    | null: false                    |
+| order          | references | null: false, foreign_key: true |
