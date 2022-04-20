@@ -30,6 +30,16 @@
 | prefecture_id     | integer    | null: false                    |
 | user              | references | null: false, foreign_key: true |
 
+### Association
+- belongs_to :user
+- has_many :comments
+- has_many :orders
+- belongs_to :category
+- belongs_to :state
+- belongs_to :delivery_price
+- belongs_to :delivery_date
+- belongs_to :prefecture
+- has_one_attached :image
 
 ## commentsテーブル
 
@@ -39,6 +49,9 @@
 | item    | references | null: false, foreign_key: true |
 | user    | references | null: false, foreign_key: true |
 
+### Association
+- belongs_to :user
+- belongs_to :comment
 
 ## ordersテーブル
 
@@ -47,6 +60,10 @@
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 
+### Association
+- belongs_to :user
+- belongs_to :item
+- has_many :addresses
 
 ## addressesテーブル
 
@@ -59,3 +76,7 @@
 | tel_number     | string     | null: false                    |
 | prefecture_id  | integer    | null: false                    |
 | order          | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
+- belongs_to :prefecture
