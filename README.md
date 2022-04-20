@@ -33,7 +33,7 @@
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_many :orders
+- has_one :order
 - belongs_to :category
 - belongs_to :state
 - belongs_to :delivery_price
@@ -63,7 +63,7 @@
 ### Association
 - belongs_to :user
 - belongs_to :item
-- has_many :addresses
+- has_one :address
 
 ## addressesテーブル
 
