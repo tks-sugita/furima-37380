@@ -37,7 +37,7 @@
 - belongs_to :category
 - belongs_to :state
 - belongs_to :delivery_price
-- belongs_to :delivery_date
+- belongs_to :DeliveryDate
 - belongs_to :prefecture
 - has_one_attached :image
 
